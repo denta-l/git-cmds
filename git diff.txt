@@ -1,0 +1,37 @@
+git diff
+
+
+
+most recent commit (what has changed since our last commit)
+git diff
+git diff HEAD
+
+to see parent of lates commit
+git diff HEAD^
+
+to see grandparent of lates commit
+git diff HEAD^^
+
+five commits ago
+git diff HEAD~5
+
+second most recent vs most recent commit
+git diff HEAD^..HEAD
+
+
+to compare range of sha
+git diff <sha>..<sha>
+
+
+range of abbreviated shas
+git dif <abreviate_sha>..<abreviated_sha>
+
+
+diff between two branches
+git diff master bird
+
+
+time based diff
+git diff --since=1.week.ago --until=1.minute.ago
+
+

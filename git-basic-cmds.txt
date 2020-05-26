@@ -1,0 +1,147 @@
+git
+
+
+-----
+git add
+-------
+
+a list of files:
+git add <list of files>	
+
+add all files:
+git add --all
+
+add all text files in current directory:
+git add *.txt
+
+add all text files in docs directory:
+git add docs/*.txt
+
+add all files in docs directory:
+git add docs/
+
+add all text files in the while project:
+git add "*.txt"
+
+
+
+==========
+git dif
+==========
+
+unstaged differences since the last commit
+git diff
+
+staged differences
+git diff --staged
+
+
+
+
+=======
+commit (stage and unstage)
+========
+
+to unstage
+dit reset HEAD <file name>
+
+HEAD - last commit on the current branch
+
+
+to remove all changes since last commit to file
+git checkout -- <file name>
+
+
+to add commit tracked files (untracked files will be ignored)
+git commit -a -am "comment"
+
+
+to roll back the last commit
+to undo a commit (^ means move to the commit before HEAD)
+git reset --soft head^
+
+
+to add things to last commit
+to modify commit (modify the last commit)
+git commit --amend -m "new commit messeage to override the previous one"
+
+
+undo the last commit and all changes
+git reset --hard HEAD^
+
+
+undo the last 2 commits and all changes
+git reset -- HEAD^^
+
+
+
+=============
+remote branch
+==============
+
+
+to git list of remote repos out local repo knows about
+git remote -v
+
+to push to remote 
+git push -u origin master
+
+
+git pull
+
+
+to add new remote
+git remote add <name> <address>
+
+
+to remove remotes
+git remote rm <name>
+
+
+to push to remote
+git push -u <name> <branch>
+
+
+
+
+=============
+git branches
+=============
+
+git clone <address>
+git clone <address> folder_name
+
+
+git branch cat (create feature branch cat)
+
+
+git checkout cat (move to cat)
+git add .
+git commit
+
+git checkout master
+git merge cat 
+		fast forward merger (since nothing was done on master)
+git branch -d cat  (to delete cat)
+
+
+short cut to create branch and checkout
+(creates new branch admin and check out)
+git checkout -b admin
+
+	recursive merging (since there were commits in both master & feature br)
+For merge commit message Git uses Vi by default
+to quite
+:Wq and hit Enter
+
+Git uses Vi if no default editor is set to edit commit messages
+
+Vi commands:
+j - Down
+k - Up
+ESC - leave mode
+:Wq - save & quit
+h - left
+I - right
+i - insert mode
+:q! - cancel & quite

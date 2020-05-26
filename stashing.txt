@@ -1,0 +1,36 @@
+stashing
+
+
+to save out wip into temp area
+do: git stash save
+
+to resume working on feature br
+do: git checkout <branch>
+	git stash apply
+
+
+to see list of stash (stash stack)
+do: git stash list
+
+	stash@{0}:
+	stash@{1}:
+	stash@{2}:
+
+	to apply a specific stash from stash list
+	do: git stash apply stash@{1}
+
+	if we do no specify stash name the stash@{0} will apply be default
+
+	to remove stash from stash stack
+	do: git stash drop
+
+
+	git stash 			git stash save
+	git stash apply 	git stash apply stash@{0}
+	git stash drop 		git stash drop stash@{0}
+	git stash pop 		git stash apply git stash drop
+
+
+normally only tracked files get stashed
+to stash untracked files
+do: git stash save --include-untracked

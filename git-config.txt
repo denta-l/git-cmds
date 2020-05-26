@@ -1,0 +1,73 @@
+git
+
+configurations
+
+--local   a single repo
+--global	for a user
+--system	for all users
+
+sett & view config settings
+----------------------------
+
+git config --global user.name "denta-l"
+git config --global user.email "denta.l@outlook.com"
+git config --global --list
+
+or in folder .git/config
+
+
+
+Configuring line endings
+-----------------------
+
+linux/mac: git config --global core.autocrlg input
+
+windows: git config --global core.autocrlf true
+
+
+Configure push default
+----------------------
+push current branch up to github
+git config --global push.default simple
+
+
+pull default
+-------
+git pull
+	- git fetch
+	- git merge
+
+defaults all new branches to fetch then rebase
+git config --global pull.rebase true
+git pull --rebase
+	- git fetch
+	- git rebase
+
+
+
+configure Reuse Record Resolution
+---------------------------------
+Records all fixes to merge conflicts
+Reuses them automatically if the same conflict recurs
+
+git config --global rerere.enabled true
+
+
+
+configure output colors
+----------------------------
+git config --global color.ui true
+
+
+
+Configuring Aliases 
+
+- git s
+	git config --global alias.s "status -s"
+	<just type (git s) to get the silent status output>
+
+
+- git lg
+	git config --global alias.lg "log --oneline --decorate --all --graph"
+	<git lg> will now give us a concise, useful log
+	

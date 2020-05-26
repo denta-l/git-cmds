@@ -1,0 +1,51 @@
+git-blame-remove file.txt
+
+
+git blame <file-name> --date short
+
+displays
+	commit hash
+	author
+	date
+	line#
+	content
+
+
+
+excluding files
+
+to exclude a folder called experiment
+move it to
+.git/info/exclude
+
+
+exluding
+use .gitignore
+with pattern
+logs/*.log (any log file in log folder)
+
+
+
+remove file
+	git rm <file-name>
+	git status
+	git commit -m "message"
+
+
+to untrack file
+	git rm --cached dev.log
+	git status (not deleted from local file system, only from Git)
+	.gitignore
+		logs/*.log (will ignore all log files inside the logs directory)
+	git add .gitignore
+	git commit -m "ignore all log files"
+
+
+
+configure emacs for interactive commands
+git config --global core.editor emacs
+
+use opendiff for meging conflict
+git config --global merge.tool opendiff
+
+

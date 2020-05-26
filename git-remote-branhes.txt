@@ -1,0 +1,57 @@
+git-remote-branhes
+
+
+to create a new branch
+do: git checkout -b shopping_cart
+
+to push it git hub
+do: git push origin shopping_cart
+
+
+
+
+pulling new branch
+do: git pull
+
+to list all remote branches
+do: git branch -r
+
+
+
+to show tacked/untracked remote branches
+to show local branched configured for git pull
+to show local refs configured for git push
+do: git remote show origin
+
+
+
+to remove remote branch
+do: fit push origin :shopping_cart
+
+
+to delete local branch
+do: git branch -d shopping_cart
+	dit branch -D shopping_cart (force delete)
+
+
+
+
+tagging
+tag is a reference to a commit(used mostly for release versioning)
+
+to list tags
+do: git tag
+
+
+to checkout code at commit
+do: git checkout <tag #>
+
+
+to add new tag
+do: git tag -a <tag #> -m "message"
+
+
+to push new tags
+do: git push --tags
+
+

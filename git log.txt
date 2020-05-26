@@ -1,0 +1,60 @@
+git log
+
+
+to colorize the log
+do: git config --global color.ui true
+
+
+to see sha and commit message
+do: git log --pretty=oneline
+
+
+
+log format
+do: git log --pretty=format:"%h %ad- %s [%an]"
+
+%ad = author date
+%an = author name
+%h = SHA hash
+%s = subject
+%d = ref names
+
+to use aliase for the above
+git config --global alias.mylog "log --pretty=format: '%h %s [%an]' --graph"
+git config --global alias.lol "log --graph --decorate --pretty=oneline --abbreviate-commit --all"
+
+
+
+to see while lines where removed/added for each commit
+do: git log --oneline -p
+
+
+to see how many lines where added/taken out for each commit
+do: git log --oneline --stat
+
+
+to see graph (visual representation of br merging into master)
+do: git log --oneline --graph
+
+
+
+date ranges
+until 
+git log --until=1.minute.ago
+
+since(days)
+git log --since=1.day.ago
+
+since(hours)
+git log --since=1.hour.ago
+
+
+since & until(reltive)
+git log --since=1.month.ago --until=2.weeks.ago
+
+
+since & until (absolute)
+git log --since=2000-01-01 --until=2012-12-21
+
+
+

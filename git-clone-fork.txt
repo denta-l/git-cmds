@@ -1,0 +1,21 @@
+git-clone-fork
+
+
+clone: if addes as a colaborator
+fork: if you're not a collaborator
+fork-> copy the repo to your user account or organization
+	-> fork includes all branched, tags and history
+
+updating fork (everytime PR is accepted in the upstream repo)
+-----------------------------------------------------------
+add remote for upstream:
+git remote add upstream <path to repo>
+
+fetch changes:
+git fetch upstream
+
+merge them into master:
+git merge upstream/master master
+
+push them to your remote:
+git push origin master

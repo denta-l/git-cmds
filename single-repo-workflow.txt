@@ -1,0 +1,23 @@
+single-repo-workflow
+
+
+everyone is working on a clone of the same repo from github
+if everyone is puhsing to the master branch, you will end up facing conflict on a regular basis
+use a feature branch strategy
+where everyone is working on their own separate feature branches on that single repo
+each developer can collaboreate on each feature branch
+	git fetch
+	git branch -a
+	git checkout <feature branch>
+
+	when a feature is done, any member can check it out, run test and merge to master branch and push that up to git hub
+
+	create a branch locally:
+	----------------------
+	git checkout -b kill_list
+	git add .
+	git commit -m "comment"
+	git push -u origin kill_list (pushed the branch to github with the same name & sets the default upstream for the branch)
+
+	create a pull request (to master branch)
+	master....kill_list

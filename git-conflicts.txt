@@ -1,0 +1,44 @@
+git-conflicts
+
+
+changes on different files
+=============================
+
+git push rejected: the tip of your current branch is behind the remote branch
+
+to solve:
+do: git pull
+do: git push
+
+
+what is happening under the hood when we do git pull?
+1: git fetches where our local repo is synced with remote one
+	the local repo is not updated
+	 in the local repo git created a branch called orgin/master
+
+	master branch 				oringin/master
+	(local repo)				(created from remote in local repo)
+
+
+2: git merges the oringin/master with master (git merge origin/master)
+
+3: create a merge commit
+	the two branches master & origin/master merged on merge commit
+
+4: git push to origin/master in remote repo
+
+
+
+
+changes on same file
+=====================
+two different commit on the same file
+
+merge conflict on <filename>
+
+edit the file manually
+do: git commit -a
+do:  merger commit in editor
+do: git push to orgin/master
+
+

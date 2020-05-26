@@ -1,0 +1,13 @@
+git alias
+
+git config --gloabl alias.st status
+git st
+
+git config --gloabl alias.co checkout
+git co
+
+git config --global alias.br branch
+git br
+
+git config --global alias.ci commit
+git ci

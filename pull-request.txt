@@ -1,0 +1,41 @@
+pull-request
+
+
+pull master
+create a feature branch
+make commits
+do a pull request
+get commets
+make changes and push to branch (PR point to head of the branch)
+approver will merger the feature to master br
+	1. on the ui
+	2. merge the feature br locally on the command line and the push those changes up to git hub
+
+
+comment types
+	- on the PR
+	- on the commit
+	- on the line
+
+use @name
+
+
+
+Reviewing a PR
+--------------
+download a PR
+git fetch/pull
+
+view all of the branches
+git branch -a
+
+checkout a local copy of a remore br
+git checkout <branch_name>
+
+test code, make changes, commit and push changes
+git commit -am
+git push
+
+
+
+

@@ -1,0 +1,77 @@
+rebase
+
+
+do: git fetch
+do: git rebase
+	
+	what rebase does?
+	1: moves all the changes in master that are not in origin/master to temp area
+	2: runs all origin/master commits one at a  time on master
+	3: runs commits in temp area on on master one at a time
+
+	** no merge commots ***
+
+
+
+
+do: git check out admin branch
+do: git rebase master
+do: git checkout master
+do: git merge admin
+
+
+
+conflicts in rebase
+
+do: git fetch
+do: git rebase
+
+	message when there is conflict
+	Conflict(content):
+	when you have resolved this problem run "git rebase --continue"
+											"git rebase --skip"
+											"git rebase --abort"
+
+to solve conflict
+---------------
+git status
+edit file
+git add <file name>
+git rebase --continue
+
+
+
+
+
+
+to update the unicorn branch with master br (replay commits from master on unicorn)
+$ git checkout unicorns 
+$ git rebase master 
+
+	this moves the unique commits in the unique br into temp area
+	commits from master are moved to unique br
+	commits in temp area are replayed ontop of commits from master
+
+
+
+Interactive rebase
+ re doing commits on the same branch
+
+if we want redo the last 3 commits
+HEAD~3: means three commits before the current head
+HEAD^: go to parent commit 
+do: git rebase -i HEAD~3
+
+	this pop up editor
+	# Commands: 
+	#  p, pick = use commit 
+	#  r, reword = use commit, but edit the commit message 
+	#  e, edit = use commit, but stop for amending (to split commits)
+	#  s, squash = use commit, but meld into previous commit 
+	#  f, fixup = like "squash", but discard this commit's log message 
+	#  x, exec = run command (the rest of the line) using shell
+
+
+	git log vs git rebase ordering
+	git log: shows newest to olders
+	git rebase: shows oldest to newest
